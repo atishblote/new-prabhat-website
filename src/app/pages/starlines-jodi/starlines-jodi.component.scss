@@ -1,0 +1,88 @@
+@import "../../global.scss";
+th {
+    padding: 15px;
+    border: 1px solid white;
+    text-align: center;
+    color: $bg-light;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+thead {
+    background: $accent-color;
+}
+table.table_border {
+    width: 100%;
+    background: #242424;
+    color: white;
+    border-collapse: collapse;
+}
+td {
+    font-size: 17px;
+    padding: 10px 10px;
+    border: 1px solid #dcd2d2;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    background:$bg-light;
+}h1{
+    text-align: center;
+    color: $primary-color;
+}
+.container_sm{
+    max-width: 1024px;
+}
+.jodi-data.table_body {
+    max-width: 100% !important;
+    overflow: scroll !important;
+}
+tbody tr td:first-child{
+    font-size: 1rem !important;
+}
+.jodi_page{
+    
+    padding: 15px;
+    .p_style {
+        color: #000000DE;
+        letter-spacing: 0.1px;
+        line-height: 1.5rem;
+        font-size: 17px;
+    }
+    .h2 {
+            text-align: center;
+            padding: 6px;
+            color: white;
+            border-radius: 0px;
+            background-color: $accent-color;
+            margin: 0;
+        }
+        .about_us, .faq_div {
+            border-radius: 15px;
+            overflow: hidden;
+            background: $bg-light;
+        }
+        .faq_div{
+            margin: 1.2rem 0;
+
+            .faq_title {
+                font-size: 1.1rem;
+            }
+            p{
+                    font-size: 1rem;
+                    margin: 0;
+            }
+        }
+    
+}
+@media screen and (max-width:768px) {
+    td {
+        font-size: 15px;
+        padding: 10px 5px;
+    
+    }
+    th{
+        padding: 15px 5px;
+
+        font-size: 14px;
+        white-space: pre;
+    }
+}

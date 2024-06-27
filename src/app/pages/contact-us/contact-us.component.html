@@ -1,0 +1,120 @@
+<div class="container contact-us">
+
+    <h1>Contact us</h1>
+
+    <div class="inner_contact">
+
+        <div class="row gap_5">
+            <div class="col">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+                    <div class="form_group">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput formControlName="name" placeholder="Ex. Jhon">
+                        </mat-form-field>
+                    </div>
+                    <div class="form_group">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                            <!-- @if (contactForm.hasError('email')) {
+                  <mat-error>Please enter a valid email address</mat-error>
+                }  -->
+                            @if (contactForm.get('email').errors?.required) {
+                            <mat-error>Email is <strong>required</strong></mat-error>
+                            }
+                            <!-- <mat-error>Please enter a valid email address</mat-error> -->
+                            @if (contactForm.get('email').errors?.email) {
+                            <mat-error>Please enter a valid email address</mat-error>
+                            }
+
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form_row">
+                        <div class="col_3">
+                            <mat-form-field>
+                                <mat-label>Select Country</mat-label>
+                                <mat-select formControlName="country">
+                                    <mat-option selected value="India">India (+91)</mat-option>
+
+                                    @for (c of countryData; track c) {
+                                    <mat-option [value]="c.name.common">{{c.name.common}} (
+                                        {{c.idd.root}}{{c.idd.suffixes?.[0]}})</mat-option>
+                                    }
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col_7">
+                            <mat-form-field hintLabel="Max 10 characters">
+                                <mat-label>Mobile Number</mat-label>
+                                <input matInput #input maxlength="10" (input)="onInput($event)"
+                                    formControlName="number" />
+                                <mat-hint align="end">{{value().length}}/10</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Leave a comment</mat-label>
+                            <textarea matInput formControlName="message"
+                                placeholder="Ex. It makes me feel..."></textarea>
+                        </mat-form-field>
+
+                    </div>
+                    <button [disabled]="!contactForm.valid" class="primary_button" type="submit">Send</button>
+
+                    <p style="color: green;">{{status}}</p>
+                    <div>
+                        <button type="reset">reset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+
+                <div class="address_details">
+                    <h3>Contact Details</h3>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <mat-icon>location_on</mat-icon>
+                                <div class="div">
+                                    <h4>Address:</h4>
+                                    <p><a href="https:hh">SOHO B , Unit 312-314 , SOHO by Panchsheel , Kharadi, Pune
+                                            411014</a></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <mat-icon>mail</mat-icon>
+                                <div class="div">
+                                    <h4>Email:</h4>
+                                    <p><a href="mailto:suportbuzztagmedia.com">suport&#64;buzztagmedia.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <mat-icon>call</mat-icon>
+                                <div class="div">
+                                    <h4>phone:</h4>
+                                    <p><a href="tel:+917756955761">+91 7756955761</a></p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- <div class="col"></div> -->
+                    </div>
+                    <br><br>
+                    <!-- <hr> -->
+                    <h3>Social Links :</h3>
+                    
+                    <app-social-media></app-social-media>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

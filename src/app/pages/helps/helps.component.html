@@ -1,0 +1,426 @@
+<div class="container help">
+
+    <h1>Helps</h1>
+
+    <div class="help_inner">
+        <div class="menu_sidebar">
+            <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                <!-- This is the tree node template for leaf nodes -->
+              
+                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                    <!-- use a disabled button to provide padding for tree leaf -->
+                    <!-- <button mat-icon-button disabled></button> -->
+
+                    <ul>
+                        <li><a href="/help#{{node.name.slice(0,5)}}">{{node.name}}</a></li>
+                    </ul>
+                </mat-tree-node>
+                <!-- This is the tree node template for expandable nodes -->
+                <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                        <mat-icon class="mat-icon-rtl-mirror">
+                            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                        </mat-icon>
+                    </button>
+                    {{node.name}}
+                </mat-tree-node>
+            </mat-tree>
+        </div>
+        <div class="help_details">
+            <p>Dokan Multi Vendor documentation has detailed tutorials, videos, step by step guidelines & support to
+                ensure you run your marketplace with no difficulty!</p>
+            <h3>Articles</h3>
+            <ul>
+                <li>Installing Dokan Multi Vendor Marketplace</li>
+                <li>Admin Multi-Step Setup Wizard
+                    <ul>
+                        <li>Basic Configuration</li>
+                        <li>WooCommerce Settings</li>
+                        <li>Payment</li>
+                        <li>Shipping</li>
+                        <li>Tax</li>
+                    </ul>
+                </li>
+                <li>Installed Pages</li>
+                <li>Dokan Shortcodes</li>
+                <li>Activating & Deactivating Dokan Modules</li>
+                <li>Upgrade License</li>
+            </ul>
+
+            <div id="first">
+                <div
+                    class="entry-content wedocs-single-content wp-block-post-content has-global-padding is-content-justification-left is-layout-constrained wp-container-core-post-content-layout-1 wp-block-post-content-is-layout-constrained">
+                    <p>In this documentation, we’ll show you how you can easily install Dokan – Multivendor marketplace
+                        on your WordPress site.</p>
+
+
+
+                    <p>Let’s check out the following steps very carefully.</p>
+
+
+                    
+                    <h2   class="wp-block-heading">Prerequisites</h2>
+
+
+
+                    <ul>
+                        <li><a href="https://dokan.co/blog/3709/how-to-install-wordpress-locally-on-mac-windows/"
+                                target="_blank" rel="noreferrer noopener">WordPress</a></li>
+
+
+
+                        <li><a href="https://wordpress.org/plugins/dokan-lite/" target="_blank"
+                                rel="noreferrer noopener">Dokan</a></li>
+
+
+
+                        <li><a href="https://wordpress.org/plugins/woocommerce" target="_blank"
+                                rel="noreferrer noopener">WooCommerce</a></li>
+                    </ul>
+
+
+
+                    <p>Note: Do make sure that you have successfully <strong><em>installed &amp; activated</em></strong>
+                        Dokan on your live server or local host.</p>
+
+
+                   
+                    <h2 id="Insta" class="wp-block-heading">Installing &amp; Activating Dokan</h2>
+
+
+
+                    <ul>
+                        <li>First of all, log in to the admin panel of your WordPress site. And navigate to
+                            <strong>Plugins</strong> → <strong>Add New</strong> → <strong>Dokan</strong> and. Click
+                            <strong>Install</strong> &amp; <strong>Activate</strong>. After activating Dokan, you’ll get
+                            a <a href="https://dokan.co/docs/wordpress/getting-started/admin-multi-step-setup-wizard/"
+                                target="_blank" rel="noreferrer noopener">multistep setup wizard screen</a>. So you need
+                            to carefully fill out the wizard. </li>
+                    </ul>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/09/Install-Dokan-1024x356.png" alt="Install-Dokan"
+                            class="wp-image-384727 ls-is-cached lazyloaded"
+                            title="Installing Dokan Multi-Vendor Marketplace 1"
+                            data-src="https://cdn.wedevs.com/uploads/2021/09/Install-Dokan-1024x356.png"
+                            data-eio-rwidth="1024" data-eio-rheight="356"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/09/Install-Dokan-1024x356.png" alt="Install-Dokan"
+                            class="wp-image-384727" title="Installing Dokan Multi-Vendor Marketplace 1" data-eio="l">
+                    </figure>
+
+
+
+                    <ul>
+                        <li>Next, you’ll need WooCommerce to run Dokan. So like the same way, you’ll need to install it.
+                            Therefore, navigate to <strong>Plugins&gt; Add New&gt; WooCommerce&gt; Install&gt;
+                                Activate</strong>.</li>
+                    </ul>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/Install-WooCommerce-1024x454.png"
+                            alt="Installing WooCommerce" class="wp-image-346230 ls-is-cached lazyloaded"
+                            title="Installing Dokan Multi-Vendor Marketplace 2"
+                            data-src="https://cdn.wedevs.com/uploads/2021/01/Install-WooCommerce-1024x454.png"
+                            data-eio-rwidth="1024" data-eio-rheight="454"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/Install-WooCommerce-1024x454.png"
+                            alt="Installing WooCommerce" class="wp-image-346230"
+                            title="Installing Dokan Multi-Vendor Marketplace 2" data-eio="l"></figure>
+
+
+
+                    <p><strong>Note: To know more about the configuration of WooCommerce, you can follow <a
+                                href="https://docs.woothemes.com/documentation/plugins/woocommerce/" target="_blank"
+                                rel="noreferrer noopener">their documentation here</a>.</strong></p>
+
+
+
+                    <p>However, you can also install any plugin using the <strong>downloadable ZIP file</strong>. In
+                        that case, you need to download the ZIP file from WordPress.Org and then upload it to your
+                        website.</p>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/ZIP-upload-1024x391.png"
+                            alt="This is a screenshot of Uploading the Dokan Lite file onto the WordPress dashboard"
+                            class="wp-image-346234 ls-is-cached lazyloaded"
+                            title="Installing Dokan Multi-Vendor Marketplace 3"
+                            data-src="https://cdn.wedevs.com/uploads/2021/01/ZIP-upload-1024x391.png"
+                            data-eio-rwidth="1024" data-eio-rheight="391"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/ZIP-upload-1024x391.png"
+                            alt="This is a screenshot of Uploading the Dokan Lite file onto the WordPress dashboard"
+                            class="wp-image-346234" title="Installing Dokan Multi-Vendor Marketplace 3" data-eio="l">
+                    </figure>
+
+
+
+                    <p>So after you successfully install Dokan &amp; WooCommerce, here is what they will look like.</p>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/Installed-Plugins-1024x347.png"
+                            alt="This is a screenshot of the WordPress dashboard active plugins page"
+                            class="wp-image-346272 lazyloaded" title="Installing Dokan Multi-Vendor Marketplace 4"
+                            data-src="https://cdn.wedevs.com/uploads/2021/01/Installed-Plugins-1024x347.png"
+                            data-eio-rwidth="1024" data-eio-rheight="347"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/Installed-Plugins-1024x347.png"
+                            alt="This is a screenshot of the WordPress dashboard active plugins page"
+                            class="wp-image-346272" title="Installing Dokan Multi-Vendor Marketplace 4" data-eio="l">
+                    </figure>
+
+
+
+                    <p>You can read the documentation about <a
+                            href="https://dokan.co/docs/wordpress/getting-started/admin-multi-step-setup-wizard/"
+                            target="_blank" rel="noreferrer noopener">Dokan Admin Setup Wizard </a>for more information.
+                    </p>
+
+
+
+                    <figure
+                        class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                        <div class="wp-block-embed__wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tKAgVLgVVmE?si=lWrUZqB2Mb2z7C1d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </figure>
+
+
+
+                    <h2 id="Admin" class="wp-block-heading">How to Upgrade from Free To Pro&nbsp;Version</h2>
+
+
+
+                    <p>If you are using the free version of Dokan Multivendor Marketplace and want to upgrade to pro
+                        version, just download the dokan.zip
+                        from&nbsp;<strong>https://wedevs.com/account/downloads</strong>/&nbsp;and install it. Now, click
+                        on the Activate button. You are done!</p>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/Dokan-Pro-1024x348.png" alt="Dokan Pro"
+                            class="wp-image-346296 lazyloaded" title="Installing Dokan Multi-Vendor Marketplace 5"
+                            data-src="https://cdn.wedevs.com/uploads/2021/01/Dokan-Pro-1024x348.png"
+                            data-eio-rwidth="1024" data-eio-rheight="348"><img decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2021/01/Dokan-Pro-1024x348.png" alt="Dokan Pro"
+                            class="wp-image-346296" title="Installing Dokan Multi-Vendor Marketplace 5" data-eio="l">
+                    </figure>
+
+
+
+                    <p>If you are using FTP to transfer your files to your server. Then just unzip the plugin and upload
+                        <code>dokan-plugin</code>&nbsp;directory to your <code>/wp-content/plugins/</code> directory.
+                    </p>
+
+
+
+                    <p>To activate your license, you can follow this <a
+                            href="https://dokan.co/docs/wordpress/updates/license-activation-2/" target="_blank"
+                            rel="noreferrer noopener">documentation</a>.</p>
+
+
+
+                    <p>If you want to upgrade your existing package to a higher one, for example, if you are using Dokan
+                        Starter and now want to upgrade to Professional or Business, you can read this <a
+                            href="https://dokan.co/docs/wordpress/updates/license-activation-2/" target="_blank"
+                            rel="noreferrer noopener">documentation</a>.</p>
+
+
+
+                    <h2 id="Instaa" class="wp-block-heading">Installation of the Pro version of the Dokan Plugin</h2>
+
+
+
+                    <p>First, you need to download the <strong>Dokan Pro</strong> plugin from your <strong><a
+                                href="https://app.dokan.co/downloads">Dokan.co Account &gt; Downloads</a></strong>
+                        screen.&nbsp;</p>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img fetchpriority="high" decoding="async"
+                            width="1024" height="270"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAEOAQAAAAA/VFj5AAAAAnRSTlMAAHaTzTgAAAA4SURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAuwGIDgAB+EEcWQAAAABJRU5ErkJggg=="
+                            alt="dokan pro download" class="wp-image-482923 lazyload"
+                            title="Installing Dokan Multi-Vendor Marketplace 6"
+                            data-src="https://dokan.co/app/uploads/2014/06/dokan-pro-download-1024x270.png"
+                            data-srcset="https://dokan.co/app/uploads/2014/06/dokan-pro-download-1024x270.png 1024w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-300x79.png 300w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-768x202.png 768w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-1536x405.png 1536w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-18x5.png 18w, https://dokan.co/app/uploads/2014/06/dokan-pro-download.png 1920w"
+                            data-sizes="auto" data-eio-rwidth="1024" data-eio-rheight="270"><img fetchpriority="high"
+                            decoding="async" width="1024" height="270"
+                            src="https://dokan.co/app/uploads/2014/06/dokan-pro-download-1024x270.png"
+                            alt="dokan pro download" class="wp-image-482923"
+                            title="Installing Dokan Multi-Vendor Marketplace 6"
+                            srcset="https://dokan.co/app/uploads/2014/06/dokan-pro-download-1024x270.png 1024w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-300x79.png 300w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-768x202.png 768w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-1536x405.png 1536w, https://dokan.co/app/uploads/2014/06/dokan-pro-download-18x5.png 18w, https://dokan.co/app/uploads/2014/06/dokan-pro-download.png 1920w"
+                            sizes="(max-width: 1024px) 100vw, 1024px" data-eio="l" /></figure>
+
+
+
+                    <p>You will see that a <strong>.zip</strong> file will be downloaded. Then you need to go to the
+                        <strong>WordPress Admin Dashboard &gt; Plugins &gt; Add New</strong> screen and click on the
+                        <strong>“Upload Plugin”</strong> button.&nbsp;</p>
+
+
+
+                    <figure class="wp-block-image aligncenter"><img decoding="async"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="Upload the Dokan pro Zip file" title="Installing Dokan Multi-Vendor Marketplace 7"
+                            data-src="https://lh3.googleusercontent.com/SaID9SFkCV-LRonynoi29kNRGsSX3HdUottZl1Q7sTVcq4S8EfYV0dIWYXHSWCYeGBHPr7iNCbcPIq6uKCSrJ8kvBvSHQZqXzb33uVHj9TOK3zw7nuQegPRizPzGYz9TX5QYV65o5gI0VXG-RpvpF2o"
+                            class="lazyload"><img decoding="async"
+                            src="https://lh3.googleusercontent.com/SaID9SFkCV-LRonynoi29kNRGsSX3HdUottZl1Q7sTVcq4S8EfYV0dIWYXHSWCYeGBHPr7iNCbcPIq6uKCSrJ8kvBvSHQZqXzb33uVHj9TOK3zw7nuQegPRizPzGYz9TX5QYV65o5gI0VXG-RpvpF2o"
+                            alt="Upload the Dokan pro Zip file" title="Installing Dokan Multi-Vendor Marketplace 7"
+                            data-eio="l"></figure>
+
+
+
+                    <p>Select the Dokan plugin .zip file that you have downloaded and click on the <strong>“Install
+                            Now”</strong> button.&nbsp;</p>
+
+
+
+                    <figure class="wp-block-image aligncenter"><img decoding="async"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="Click on the install now button" title="Installing Dokan Multi-Vendor Marketplace 8"
+                            data-src="https://lh6.googleusercontent.com/I86j8JPV7ENT-k0UJQaCMLoTo7_ZuSjTJrq5ZZbzWfJazVceQqRjC0O_x3iYz87dEby1cLBnloH2C23QXLx-TVql-DOvokXCmt6Ym77HmCPCHyO9KgflRzBgcCOGZcWevIsFgZKWcqfIL7UXEPAiuqo"
+                            class="lazyload"><img decoding="async"
+                            src="https://lh6.googleusercontent.com/I86j8JPV7ENT-k0UJQaCMLoTo7_ZuSjTJrq5ZZbzWfJazVceQqRjC0O_x3iYz87dEby1cLBnloH2C23QXLx-TVql-DOvokXCmt6Ym77HmCPCHyO9KgflRzBgcCOGZcWevIsFgZKWcqfIL7UXEPAiuqo"
+                            alt="Click on the install now button" title="Installing Dokan Multi-Vendor Marketplace 8"
+                            data-eio="l"></figure>
+
+
+
+                    <p>Once the installation is complete, click on the <strong>“Activate Plugin”</strong> button.</p>
+
+
+
+                    <figure class="wp-block-image aligncenter"><img decoding="async"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="Activate the Dokan pro plugin" title="Installing Dokan Multi-Vendor Marketplace 9"
+                            data-src="https://lh6.googleusercontent.com/0KZA-2Z5_W1P4Pdhzswph0ycd5y_PSy88acnrU5m8HOuArvaBPN7hkYIHbuQerFWq4_67XJnvZ15OsczYZuajBXqSzkXKT6mzWUdVRlmznxzq8ee8dgQCGy0oYvRYdXKOCmmnvtCG70WeebVHGi1Ba8"
+                            class="lazyload"><img decoding="async"
+                            src="https://lh6.googleusercontent.com/0KZA-2Z5_W1P4Pdhzswph0ycd5y_PSy88acnrU5m8HOuArvaBPN7hkYIHbuQerFWq4_67XJnvZ15OsczYZuajBXqSzkXKT6mzWUdVRlmznxzq8ee8dgQCGy0oYvRYdXKOCmmnvtCG70WeebVHGi1Ba8"
+                            alt="Activate the Dokan pro plugin" title="Installing Dokan Multi-Vendor Marketplace 9"
+                            data-eio="l"></figure>
+
+
+
+                    <p>As soon as you have completed these steps, Dokan should be installed on your website. After that,
+                        you can go for <a href="https://dokan.co/docs/wordpress/getting-started/basic-configuration/"
+                            target="_blank" rel="noreferrer noopener">basic configuration.</a></p>
+
+
+
+                    <h2 class="wp-block-heading">How to Install Dokan Lite without Uploading</h2>
+
+
+
+                    <p>As you already know that <a href="https://wordpress.org/plugins/dokan-lite/" target="_blank"
+                            rel="noreferrer noopener">Dokan Lite</a>&nbsp;is a Free Multivendor Marketplace Plugin for
+                        WordPress. You can&nbsp;<a href="https://downloads.wordpress.org/plugin/dokan-lite.zip"
+                            target="_blank" rel="noreferrer noopener">download Dokan from here</a>&nbsp;and upload it
+                        from your WordPress site. However, there is another alternate way that allows you to install
+                        Dokan without uploading. </p>
+
+
+
+                    <p>Dokan lite is available at wordpress.org for free, it is very easy to install. Now we will
+                        discuss the simplest and easiest way of installing Dokan to your WordPress site.</p>
+
+
+
+                    <h3 class="wp-block-heading">Installing Dokan Directly from WordPress Dashboard</h3>
+
+
+
+                    <p>Login to your WordPress Site and visit the WordPress Dashboard. Navigate to
+                        –&nbsp;<strong>wp-admin → Plugins → Add New</strong>.</p>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large">
+
+                        <img decoding="async"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHSAQAAAABaqIStAAAAAnRSTlMAAHaTzTgAAABQSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvBvq0gAB0p2gEgAAAABJRU5ErkJggg=="
+                            alt="This is a screenshot of the WordPress plugin installation dashboard"
+                            class="wp-image-467742 lazyload" title="Installing Dokan Multi-Vendor Marketplace 10"
+                            data-src="https://wedevs.s3.amazonaws.com/uploads/2014/06/Screenshot-of-the-WordPress-Dashboard-1024x466.png"
+                            data-eio-rwidth="1024" data-eio-rheight="466"><img decoding="async"
+                            src="https://wedevs.s3.amazonaws.com/uploads/2014/06/Screenshot-of-the-WordPress-Dashboard-1024x466.png"
+                            alt="This is a screenshot of the WordPress plugin installation dashboard"
+                            class="wp-image-467742" title="Installing Dokan Multi-Vendor Marketplace 10" data-eio="l">
+                    </figure>
+
+
+
+                    <p>WooCommerce is a must if you want to use Dokan. Click on the Popular tab and look for
+                        WooCommerce. Install and Activate.</p>
+
+
+
+                    <p><strong>Note</strong>: However, with the new Dokan version, you don’t need to install WooCommerce
+                        separately. Dokan will install WooCommerce for you. </p>
+
+
+
+                    <figure class="wp-block-image aligncenter size-large"><img decoding="async"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHhAQAAAADYRvGuAAAAAnRSTlMAAHaTzTgAAABTSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzgbyYQABx6IT2QAAAABJRU5ErkJggg=="
+                            alt="This is screenshot of the WordPress dashboard updating WooCommerce"
+                            class="wp-image-467743 lazyload" title="Installing Dokan Multi-Vendor Marketplace 11"
+                            data-src="https://wedevs.s3.amazonaws.com/uploads/2014/06/Update-WooCommerce-1024x481.png"
+                            data-eio-rwidth="1024" data-eio-rheight="481"><img decoding="async"
+                            src="https://wedevs.s3.amazonaws.com/uploads/2014/06/Update-WooCommerce-1024x481.png"
+                            alt="This is screenshot of the WordPress dashboard updating WooCommerce"
+                            class="wp-image-467743" title="Installing Dokan Multi-Vendor Marketplace 11" data-eio="l">
+                    </figure>
+
+
+
+                    <p>Now, type Dokan in the Search Plugins field. You will find Dokan lite available on the List.
+                        Simply click on the Install Now button and wait for the system to add Dokan lite to your
+                        WordPress site. Finally, Activate it. That’s it.</p>
+
+
+
+                    <figure class="wp-block-image aligncenter"><img decoding="async"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="This is a GIF of WordPress dashboard searching for Dokan and activating it from the WordPress dashboard"
+                            class="wp-image-99906 lazyload" title="Installing Dokan Multi-Vendor Marketplace 12"
+                            data-src="https://cdn.wedevs.com/uploads/2017/10/dokan-lite-without-uploading.gif"><img
+                            decoding="async"
+                            src="https://cdn.wedevs.com/uploads/2017/10/dokan-lite-without-uploading.gif"
+                            alt="This is a GIF of WordPress dashboard searching for Dokan and activating it from the WordPress dashboard"
+                            class="wp-image-99906" title="Installing Dokan Multi-Vendor Marketplace 12" data-eio="l">
+                    </figure>
+
+
+
+                    <p>After activation, you will get&nbsp; Setup Wizard or Getting&nbsp;Started page. Simply configure
+                        your marketplace the way you want and you are done.&nbsp;</p>
+
+
+
+                    <h2 class="wp-block-heading">Quick Overview</h2>
+
+
+
+                    <figure
+                        class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                        <div class="wp-block-embed__wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tKAgVLgVVmE?si=lWrUZqB2Mb2z7C1d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </figure>
+
+
+
+                    <p>That’s it!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

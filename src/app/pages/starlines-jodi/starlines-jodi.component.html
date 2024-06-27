@@ -1,0 +1,64 @@
+<div class="jodi_page container">
+    <h1>{{name}} Starline Satta Matka</h1>
+    <div> 
+        <p class="p_style" style="text-align: center;">{{pageDetails?.page_about}}</p>
+    </div>
+
+    <div class="jodi-data table_body">
+        <table class="cus_table table_border">
+            <thead>
+                <tr>
+                    <th>Date :</th>
+                    @for(t of timeBreaks; track t){
+                        <th>{{t}}</th>
+                    }
+                </tr>
+            </thead>
+        <tbody>
+            @for (d of filteredData; track d){
+            <tr>
+                <td>{{d.date}}</td>
+                <td> {{ getValueForDay(d, '0') }} </td>
+                <td> {{ getValueForDay(d, '1') }}</td>
+                <td> {{ getValueForDay(d, '2') }}</td>
+                <td> {{ getValueForDay(d, '3') }}</td>
+                <td> {{ getValueForDay(d, '4') }}</td>
+                <td> {{ getValueForDay(d, '5') }}</td>
+                <td> {{ getValueForDay(d, '6') }}</td>
+                <td> {{ getValueForDay(d, '7') }}</td>
+                <td> {{ getValueForDay(d, '8') }}</td>
+                <td> {{ getValueForDay(d, '9') }}</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="about_us pb_5">
+        <h2 class="h2">
+            Exploring Prabhat Satta Matka: A Popular Game of Chance
+        </h2>
+        <div class="p_style" style="padding: 13px; " [innerHTML]="pageDetails?.page_tips"></div>
+    </div>
+
+    <div class="faq_div pb_5">
+        <h2 class="h2">
+            FAQ's
+        </h2>
+        <mat-accordion>
+            @for(f of faqData; track f; let i = $index){
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <div class="faq_title">{{i+1}}. {{f?.questions}}</div>
+                </mat-expansion-panel-header>
+                <p [innerHTML]="f?.answers"></p>
+            </mat-expansion-panel>
+            @if (!$last) {
+            }
+            }
+        </mat-accordion>
+    </div>
+    <div [innerHTML]="faqSchema"></div>
+
+</div>

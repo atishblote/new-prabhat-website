@@ -1,0 +1,43 @@
+<mat-drawer-container class="example-container" hasBackdrop="false">
+
+    <!-- <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> -->
+
+    <mat-drawer #drawer mode="over">
+
+        <button (click)="drawer.toggle()" mat-mini-fab aria-label="Example icon button with a menu icon">
+            <mat-icon>close</mat-icon>
+        </button>
+        <ul>
+            <li (click)="drawer.toggle()" routerLink="/">Home</li>
+            <li>About</li>
+            <li>Bazar</li>
+            <li>Contact</li>
+            <li>Help</li>
+        </ul>
+    </mat-drawer>
+    <div class="container">
+        <div class="header_app">
+            <div class="row">
+                <div class="col_4">
+                    <a href="/" target="_self">
+                        <img src="assets/logo.png" alt="Website Logo">
+                    </a>
+                </div>
+                <div class="col_4">
+                    <ul>
+                        <li  routerLink="/">Home</li>
+                        <li routerLink="/help">Help</li>
+                        <li routerLink="/about-us">About Us</li>
+                        <li routerLink="/contact-us">Contact</li>
+                    </ul>
+                </div>
+                <div class="col_2">
+                    <button (click)="drawer.toggle()" mat-mini-fab aria-label="Example icon button with a menu icon">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</mat-drawer-container>

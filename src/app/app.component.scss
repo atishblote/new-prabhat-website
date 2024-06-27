@@ -1,0 +1,12 @@
+@import 'global.scss';
+header {
+    // background: $primary-color;
+    background-color: $bg-dark-blue;
+    text-align: center;
+}
+footer {
+    background: $bg-dark-blue;
+    color: $bg-light;
+    padding: 30px 0;
+    text-align: center;
+}

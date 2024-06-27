@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+h5{
+    font-size: 1rem;
+}
+.t-rock {
+    padding: 8px;
+    text-align: center;
+    padding: 10px;
+    margin: 11px 0px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    background: #fff;
+    font-size: 1rem;
+
+    p {
+        font-family: "Montserrat Alternates", sans-serif;
+        letter-spacing: 0.2px;
+        padding: 0 10px;
+        font-size: 14px;
+        margin-bottom: 0;
+        color: #272727e3;
+        padding-bottom: 0;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.4rem;
+    }
+}

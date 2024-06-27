@@ -1,0 +1,71 @@
+@import "../../global.scss";
+.contact-us {
+  padding: 40px 0px;
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+  .row {
+    display: grid;
+    column-gap: 6%;
+    grid-template-columns: 46% 47%;
+  }
+
+  form {
+    .form_row {
+      display: flex;
+      column-gap: 10px;
+    }
+    .col_3 {
+      width: 42%;
+    }
+    .col_7 {
+      width: 60%;
+
+      mat-form-field {
+        width: 100%;
+      }
+    }
+    .primary_button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+  } 
+  button {
+    float: right;
+    margin: 10px 0;
+}
+  }
+
+  .address_details{
+    mat-icon{
+      color: $accent-color;
+    }
+    .row{
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+
+
+      h4 {
+        margin-bottom: 11px;
+        color: $primary-color;
+    }
+    p {
+      margin: 0;
+      
+    }
+    a{
+      color: $text-color;
+      text-decoration: none;
+    }
+    }
+  }
+
+
+}

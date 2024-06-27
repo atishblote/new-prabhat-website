@@ -1,0 +1,142 @@
+<section class="after_header">
+    <marquee behavior="" direction="rtl">!! Welcome Friends in the world of Dpboss company. May you always win. !!
+    </marquee>
+    <div class="tags container">
+        <h2>Matka | Satta Matka | Kalyan Matka | Dpboss | Satka Matka Result</h2>
+        <p style="margin: 0; padding: 19px;font-family: 'Montserrat Alternates', sans-serif; line-height: 1.5rem; font-weight: 500;">Satta Matka | Matka | Kalyan Matka | Matka Result | Satta Matta Matka | Dpboss | Madhur Matka | Kolkata Ff| Indian Matka | Satta Matka Number | Satta Matka Result | Satta Matka Guessing | Satta | Play Online Matka | Satta King | Matka Guessing | Fastest Satta Matka | Satta Matka Center | Satta Matka Free Seva | Satta Matka Tips | Satta Matka Game | Satta | Satta Matka Com | Satta Matka Bazar | Satta Fast Result | Satta King | Satta Record | Satka Matka Result | Matka Satta Game | Satka Matka | Satta Batta | Dpboss Company</p>
+    </div>
+    <div class="scroll_down">
+        <img src="/assets/scorl.png" alt="">
+            <div class="down_text">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+        </div>
+    </div>
+</section>
+
+<section class="live_update">
+    <div class="container">
+        <h2 class="h2">☔Live Result☔</h2>
+        <p>Sabse Tezz Live Result Yahi Milega</p>
+        <br>
+        <div class="p_3">
+
+            <div class="data_tabel">
+                @for(b of liveBazaarData; track b){
+                @if(b.day_of_week | loadingText){
+                @if((b.open_time | timeToSeconds) || (b.close_time | timeToSeconds)){
+                <div class="table_row bazaar_name live_items" [ngClass]="(b.is_highlighted) ? 'highilited' : ''">
+
+                    <div class="bazaar_title">{{b.bazaar_name}}</div>
+
+                    @if((b.date_time | timeStatus) == 'New' ){
+                    <div>
+                        <div class="number">
+                            <span>{{b.open }}</span> -
+                            <span>{{b.jodi}}</span> -
+                            @if(b.close){
+                            <span>{{b.close}}</span>
+                            }@else{
+                            ***
+                            }
+                        </div>
+
+                    </div>
+                    }@else{
+                    <p>Loading</p>
+                    }
+                </div>
+                }
+                }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="notice_board container"
+    style="background-image: linear-gradient(45deg, #2d2158f2, #2d2158e3), url('assets/bg.jpg');">
+    <div class="inner_div ">
+        <h3 class="h3">अब ऑनलाईन मटका खेलो ऑटोमेटिक विथड्रावल के साथ 100% भरोसेमंद मटका ऍप अभी डाऊनलोड करो</h3>
+        <a class="primary_button" href="#" target="_blank" rel="noopener noreferrer">👉 Play Online Matka</a>
+        <p>With 100% Trusted App</p>
+    </div>
+</section>
+
+<section class="news_board container">
+    <div class="inner_div ">
+        <h3 class="h3">अपना बाजार Dpboss.company वेबसाइट में डलवाने<br>
+            के लिए आज ही हमें ईमेल करे</h3>
+        <a href="mailto:support&#64;dpboss.company" target="_blank" rel="noopener noreferrer">Email :
+            support&#64;dpboss.company</a>
+        <p>शर्ते लागु</p>
+    </div>
+</section>
+
+<section class="bazar_timing">
+    <div class="container">
+        <h2 class="h2">☔Satta Matka Fastest Results in the World ☔</h2>
+        <p>Sabse Tezz Live Result Yahi Milega</p>
+
+        @for(b of liveBazaarData; track b){
+        <div class="table_row bazaar_name live_items" [ngClass]="(b.is_highlighted) ? 'highilited' : 'bg_light'">
+            <div class="row">
+                <div class="col_2">
+                    <button routerLink="jodi/{{b.slug}}" class="primary_button">JODI</button>
+                </div>
+                <div class="col_6">
+                    <div class="bazaar_title">{{b.bazaar_name}}</div>
+                    <div class="number">
+                        <span>{{b.open }}</span> -
+                        <span>{{b.jodi}}</span>
+                        @if(b.close){
+                        - <span>{{b.close}}</span>
+                        }
+                    </div>
+                    <div class="timing">
+                        <span>{{b.open_time }}</span> - <span>{{b.close_time }}</span>
+
+                    </div>
+                </div>
+                <div class="col_2">
+                    <button routerLink="panel/{{b.slug}}"  class="primary_button">PANEL</button>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</section>
+
+<section class="starline_section">
+    <div class="container">
+        <h2 class="h2">☔Starline Bazar☔</h2>
+        <app-home-starline></app-home-starline>
+    </div>
+</section>
+
+<section class="starline_section pb_5">
+    <div class="container">
+        <h2 class="h2">King Bazar☔</h2>
+        <app-home-king></app-home-king>
+    </div>
+</section>
+<br>
+
+
+<section class="notice_board login_section container"
+    style="background-image: linear-gradient(45deg, #2d2158f2, #2d2158e3), url('assets/bg.jpg');">
+    <div class="inner_div ">
+        <h3 class="h3">Advertise now on <br> Packages starting Rs.25,000/-</h3>
+        <a class="primary_button" href="#" target="_blank" rel="noopener noreferrer">👉 Login</a>
+        <br>
+        <a class="seconday_button" href="#" target="_blank" rel="noopener noreferrer">👉 Register</a>
+    </div>
+</section>
+
+<section class="details_about pb_5">
+    <div class="container">
+        <app-first></app-first>
+    </div>
+</section>
+

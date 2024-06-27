@@ -1,0 +1,27 @@
+@for(s of allSTarlineData;track s){
+    @if(s.is_active){
+
+        <div class="starline_items">
+            <table style="width: 100%;">
+                <tbody>
+                    <tr class="name">
+                        <td> {{ s.name }}</td>
+                    </tr>
+                    @if(!s.jodi){
+                        <tr class="time">
+                            <td>NA</td>
+                        </tr>
+                    }@else{
+                        <tr class="time">
+                            <td>{{s.date}} - <span>{{s.jodi}}</span></td>
+                        </tr>
+                        
+                    }
+                    <tr>
+                        <td><button routerLink="king/{{s.slug}}" class="primary_button">JODI CHART</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+    }

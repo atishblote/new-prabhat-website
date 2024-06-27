@@ -1,0 +1,69 @@
+@import "../../global.scss";
+
+.help{
+    padding: 50px 0px;
+    scroll-behavior: smooth;
+    h1{
+        text-align: center;
+    }
+ 
+    .menu_sidebar {
+        max-width: 290px;
+        width: 100%;
+        height: 70vh;
+        padding: 0 0 64px;
+        overflow-y: scroll;
+        position: sticky;
+        top: 40px;
+        margin-right: 0!important;
+
+        mat-tree-node {
+            font-size: 16px !important;
+            font-family: 'Montserrat Alternates' !important;
+            font-weight: 600 !important;
+        }
+
+        ul{
+                font-family: 'Montserrat Alternates';
+                padding-left: 24px;
+                margin: 0px;
+
+            li {
+                font-size: 16px;
+                font-family: 'roboto';
+                font-weight: 400;
+                cursor: pointer;
+                line-height: 1.4rem;
+                letter-spacing: 0.1px;
+                color: #737373e6;
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .help_inner {
+        display: flex;
+        
+    }
+    .help_details {
+        font-family: "roboto";
+        letter-spacing: 0.2px;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        color: #544f4f;
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: calc(100% - 290px);
+        // white-space: break-spaces;  
+
+
+        img{
+            width: 100%;
+        }
+
+    }
+    
+   
+}
