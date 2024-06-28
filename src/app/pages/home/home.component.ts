@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     // call api
     this.global.getWithoutToken("all-bazaar-todays").subscribe({
       next: (res:any)=>{
-        // console.log(res)
+        console.log(res)
         this.liveBazaarData = res.data
       },error : (err:any)=>{
         console.log(err)
