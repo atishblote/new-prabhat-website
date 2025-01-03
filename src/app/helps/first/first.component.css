@@ -1,0 +1,27 @@
+h5 {
+  font-size: 1rem;
+}
+
+.t-rock {
+  padding: 8px;
+  text-align: center;
+  padding: 10px;
+  margin: 11px 0px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #fff;
+  font-size: 1rem;
+}
+.t-rock p {
+  font-family: "Montserrat Alternates", sans-serif;
+  letter-spacing: 0.2px;
+  padding: 0 10px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: rgba(39, 39, 39, 0.8901960784);
+  padding-bottom: 0;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.4rem;
+}/*# sourceMappingURL=first.component.css.map */

@@ -1,6 +1,6 @@
 @import "../../global.scss";
 .after_header {
-  background: url("/assets/hero-bg-2.png");
+  background: linear-gradient(187deg, #000000, #03041e);
   background-position: center bottom;
 }
 .after_header {
@@ -265,7 +265,7 @@
   }
   .highilited {
     // background: $accent-color;
-    background: url("/assets/service-3-bg.jpg");
+    background: $bg-gradient-pink;
     background-repeat: no-repeat;
     color: white;
     background-size: cover;
@@ -279,7 +279,7 @@
       font-size: 1.2rem;
       font-weight: 700 !important;
       margin: 10px 0px;
-      color: $primary-color;
+      color: $bg-yellow;
     }
   }
 }

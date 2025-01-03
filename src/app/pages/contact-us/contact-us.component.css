@@ -1,0 +1,60 @@
+.contact-us {
+  padding: 40px 0px;
+}
+.contact-us .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.contact-us .example-full-width {
+  width: 100%;
+}
+.contact-us .row {
+  display: grid;
+  -moz-column-gap: 6%;
+       column-gap: 6%;
+  grid-template-columns: 46% 47%;
+}
+.contact-us form .form_row {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.contact-us form .col_3 {
+  width: 42%;
+}
+.contact-us form .col_7 {
+  width: 60%;
+}
+.contact-us form .col_7 mat-form-field {
+  width: 100%;
+}
+.contact-us form .primary_button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+.contact-us form button {
+  float: right;
+  margin: 10px 0;
+}
+.contact-us .address_details mat-icon {
+  color: #6624d1;
+}
+.contact-us .address_details .row {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+}
+.contact-us .address_details .row h4 {
+  margin-bottom: 11px;
+  color: #0b0b0b;
+}
+.contact-us .address_details .row p {
+  margin: 0;
+}
+.contact-us .address_details .row a {
+  color: rgba(46, 46, 46, 0.9333333333);
+  text-decoration: none;
+}/*# sourceMappingURL=contact-us.component.css.map */

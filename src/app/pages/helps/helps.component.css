@@ -1,0 +1,55 @@
+.help {
+  padding: 50px 0px;
+  scroll-behavior: smooth;
+}
+.help h1 {
+  text-align: center;
+}
+.help .menu_sidebar {
+  max-width: 290px;
+  width: 100%;
+  height: 70vh;
+  padding: 0 0 64px;
+  overflow-y: scroll;
+  position: sticky;
+  top: 40px;
+  margin-right: 0 !important;
+}
+.help .menu_sidebar mat-tree-node {
+  font-size: 16px !important;
+  font-family: "Montserrat Alternates" !important;
+  font-weight: 600 !important;
+}
+.help .menu_sidebar ul {
+  font-family: "Montserrat Alternates";
+  padding-left: 24px;
+  margin: 0px;
+}
+.help .menu_sidebar ul li {
+  font-size: 16px;
+  font-family: "roboto";
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.4rem;
+  letter-spacing: 0.1px;
+  color: rgba(115, 115, 115, 0.9019607843);
+}
+.help .menu_sidebar ul li:hover {
+  color: #0b0b0b;
+}
+.help .help_inner {
+  display: flex;
+}
+.help .help_details {
+  font-family: "roboto";
+  letter-spacing: 0.2px;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #544f4f;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: calc(100% - 290px);
+}
+.help .help_details img {
+  width: 100%;
+}/*# sourceMappingURL=helps.component.css.map */

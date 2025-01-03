@@ -1,0 +1,51 @@
+.jodi_page {
+  padding: 15px;
+}
+.jodi_page .h2 {
+  text-align: center;
+  padding: 6px;
+  color: white;
+  border-radius: 0px;
+  background-color: #6624d1;
+  margin: 0;
+}
+.jodi_page .about_us, .jodi_page .faq_div {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+}
+.jodi_page .faq_div {
+  margin: 1.2rem 0;
+}
+.jodi_page .faq_div .faq_title {
+  font-size: 1.1rem;
+}
+.jodi_page .faq_div p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #6624d1;
+  color: #fff;
+}
+
+th, td {
+  border: 1px solid rgba(128, 128, 128, 0.377);
+  padding: 8px;
+  text-align: center;
+}
+
+.table_data {
+  margin: 1.5rem 0px;
+  overflow: scroll;
+  max-width: 100%;
+}
+.table_data tbody td {
+  background-color: #fff;
+}/*# sourceMappingURL=regular-jodi.component.css.map */

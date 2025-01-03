@@ -1,0 +1,14 @@
+.about-us {
+  padding: 50px 0px;
+  scroll-behavior: smooth;
+}
+.about-us h1 {
+  text-align: center;
+}
+.about-us a {
+  font-family: roboto;
+  color: rgba(46, 46, 46, 0.9333333333);
+}
+.about-us a:hover {
+  color: #6624d1;
+}/*# sourceMappingURL=about-us.component.css.map */

@@ -1,0 +1,31 @@
+button {
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: unset;
+}
+
+.starline_items {
+  padding: 10px;
+  margin: 11px 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #fff;
+}
+.starline_items .name td {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.starline_items .time td {
+  font-size: 1.2rem;
+  padding: 5px 0;
+  color: #6624d1;
+  font-weight: 700 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .starline_items {
+    margin: 10px;
+  }
+}/*# sourceMappingURL=home-starline.component.css.map */

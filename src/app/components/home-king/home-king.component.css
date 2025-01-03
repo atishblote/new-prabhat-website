@@ -1,0 +1,36 @@
+button {
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: unset;
+}
+
+.starline_items {
+  padding: 10px;
+  margin: 11px 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #fff;
+}
+.starline_items .name td {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.starline_items .time td {
+  font-size: 1.1rem;
+  padding: 5px 0;
+  color: rgba(46, 46, 46, 0.9333333333);
+  font-weight: 600 !important;
+}
+.starline_items .time td span {
+  background-color: #6624d1;
+  color: #fff;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .starline_items {
+    margin: 10px;
+  }
+}/*# sourceMappingURL=home-king.component.css.map */

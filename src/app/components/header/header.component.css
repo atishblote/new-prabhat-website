@@ -1,0 +1,62 @@
+img {
+  width: 220px;
+  padding: 10px 0px;
+}
+
+li {
+  cursor: pointer;
+}
+
+.mat-drawer-container {
+  background-color: transparent !important;
+}
+
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden !important;
+}
+
+mat-drawer-content.mat-drawer-content {
+  overflow: hidden !important;
+}
+
+.mat-drawer {
+  width: 70% !important;
+  position: fixed;
+  height: 100vh;
+}
+
+mat-drawer ul {
+  font-size: 1.8rem;
+  list-style-type: none;
+  padding: 0;
+}
+mat-drawer ul li {
+  margin: 1em 0;
+  cursor: pointer;
+}
+
+.header_app .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_app .row ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.header_app .row li {
+  padding: 17px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .header_app .row ul {
+    display: none !important;
+  }
+}/*# sourceMappingURL=header.component.css.map */
