@@ -71,9 +71,12 @@
   .bazaar_title {
     text-align: center;
     font-size: 1.4rem;
-    color: $accent-color;
+    color: $bg-yellow;
     font-weight: 600;
   }
+}
+.data_tabel .live_items {
+  color: white;
 }
 .scroll_down {
   position: absolute;
