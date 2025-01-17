@@ -1,11 +1,11 @@
 header {
-  background-color: #000229;
+  background-color: #000000;
   text-align: center;
 }
 
 footer {
-  background: #000;
+  background: #000000;
   color: #fff;
-  padding: 30px 10px;
+  padding: 30px 0;
   text-align: center;
 }/*# sourceMappingURL=app.component.css.map */

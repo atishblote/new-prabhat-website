@@ -39,7 +39,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(166, 193, 247)), color-stop(0.72, rgb(94, 73, 189)), color-stop(0.86, rgb(86, 30, 218)));
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(0, 0, 0)), color-stop(0.72, rgb(60, 60, 60)), color-stop(0.86, rgb(0, 0, 0)));
 }
 
 .primary_button {
@@ -54,7 +54,7 @@ body {
   display: inline-block;
   z-index: 1;
   transition: 0.5s;
-  background: linear-gradient(180deg, #b1ff36 -23%, #1d863c);
+  background: linear-gradient(180deg, #ffca28 -23%, #dfa800);
   box-shadow: 0 2px 3px rgba(3, 22, 3, 0.2);
   border-radius: 10px;
 }

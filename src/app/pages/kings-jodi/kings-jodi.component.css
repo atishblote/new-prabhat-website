@@ -9,7 +9,7 @@
   padding: 6px;
   color: white;
   border-radius: 0px;
-  background-color: #6624d1;
+  background-color: #0b0b1b;
   margin: 0;
 }
 .jodi_page .about_us, .jodi_page .faq_div {
@@ -33,12 +33,12 @@ table {
   border-collapse: collapse;
 }
 table td:first-child {
-  color: #6624d1;
+  color: #0b0b1b;
   font-weight: 600 !important;
 }
 
 thead {
-  background-color: #6624d1;
+  background-color: #0b0b1b;
   color: #fff;
 }
 

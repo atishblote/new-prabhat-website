@@ -8,7 +8,7 @@ th {
 }
 
 thead {
-  background: #6624d1;
+  background: #0b0b1b;
 }
 
 table.table_border {
@@ -60,7 +60,7 @@ tbody tr td:first-child {
   padding: 6px;
   color: white;
   border-radius: 0px;
-  background-color: #6624d1;
+  background-color: #0b0b1b;
   margin: 0;
 }
 .jodi_page .about_us, .jodi_page .faq_div {

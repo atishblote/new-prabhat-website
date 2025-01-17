@@ -1,5 +1,5 @@
 .after_header {
-  background: url("/assets/hero-bg-2.png");
+  background: linear-gradient(187deg, #000000, #03041e);
   background-position: center bottom;
 }
 
@@ -29,7 +29,7 @@
   align-items: center;
 }
 .live_update .container {
-  border: 2px solid #6624d1;
+  border: 2px solid #0b0b1b;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -38,7 +38,7 @@
   padding: 6px;
   color: white;
   border-radius: 0px;
-  background-color: #6624d1;
+  background-color: #0b0b1b;
   margin: 0;
 }
 .live_update p {
@@ -50,8 +50,8 @@
 }
 .live_update .live_items {
   padding: 14px;
-  background: linear-gradient(284.05deg, #ebd1ff 8.66%, rgba(244, 233, 252, 0.54) 92.88%);
-  border-top: 2px solid #6624d1;
+  background: linear-gradient(187deg, #2b2a2a, #000000);
+  border-top: 2px solid #0b0b1b;
   margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -72,8 +72,12 @@
 .live_update .bazaar_title {
   text-align: center;
   font-size: 1.4rem;
-  color: #6624d1;
+  color: #ffca28;
   font-weight: 600;
+}
+
+.data_tabel .live_items {
+  color: white;
 }
 
 .scroll_down {
@@ -176,14 +180,14 @@
   border-radius: 20px;
   margin-top: 21px;
   text-align: center;
-  border: 2px solid #6624d1;
+  border: 2px solid #0b0b1b;
 }
 
 .bazar_timing {
   margin: 40px 0;
 }
 .bazar_timing .container {
-  border: 2px solid #6624d1;
+  border: 2px solid #0b0b1b;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -192,7 +196,7 @@
   padding: 6px;
   color: white;
   border-radius: 0px;
-  background-color: #6624d1;
+  background-color: #0b0b1b;
   margin: 0;
 }
 .bazar_timing button {
@@ -229,13 +233,13 @@
   font-size: 1.2rem;
   font-weight: 700 !important;
   margin: 10px 0px;
-  color: #6624d1;
+  color: #0b0b1b;
 }
 .bazar_timing .bg_light {
   background: #fff;
 }
 .bazar_timing .highilited {
-  background: url("/assets/service-3-bg.jpg");
+  background: linear-gradient(187deg, #2b2a2a, #000000);
   background-repeat: no-repeat;
   color: white;
   background-size: cover;
@@ -249,11 +253,11 @@
   font-size: 1.2rem;
   font-weight: 700 !important;
   margin: 10px 0px;
-  color: #0b0b0b;
+  color: #ffca28;
 }
 
 .starline_section .container {
-  border: 2px solid #6624d1;
+  border: 2px solid #0b0b1b;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -262,7 +266,7 @@
   padding: 6px;
   color: white;
   border-radius: 0px;
-  background-color: #6624d1;
+  background-color: #000;
   margin: 0;
 }
 
